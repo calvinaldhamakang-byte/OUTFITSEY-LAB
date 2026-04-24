@@ -13,6 +13,7 @@
             darkMode: 'class',
         }
     </script>
+    <link rel="stylesheet" href="animation.css">
 </head>
 
 <!-- Bar navigation dengan efek sticky dan blur -->
@@ -21,7 +22,7 @@
     <div id="loader" class="fixed inset-0 z-[100] bg-zinc-950 flex flex-col items-center justify-center transition-all duration-1000 ease-in-out">
         <!-- Logo dengan efek animasi pulse untuk menarik perhatian saat loading -->
         <div class="relative flex flex-col items-center">
-            <h1 class="text-5xl font-black tracking-tighter uppercase mb-2 animate-pulse">SEY<span class="text-red-600">BYTE</span></h1>
+            <h1 class="text-5xl font-black tracking-tighter uppercase mb-2">SEY<span class="text-red-600 animate-pulse">BYTE</span></h1>
 
             <!-- Teks loading dengan efek animasi pulse untuk memberikan indikasi bahwa halaman sedang dimuat -->
             <p class="text-zinc-500 text-[10px] tracking-[0.5em] uppercase mt-12 animate-pulse">LOADING...</p>
@@ -39,7 +40,7 @@
         <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
             <h2
                 class="text-2xl md:text-base text-left font-bold tracking-tighter hover:scale-110 uppercase hover:tracking-widest transition-all cursor-default">
-                SEY<span class="text-red-600">BYTE</h2>
+                SEY<span class="text-red-600 animate-pulse">BYTE</span></h2>
 
                 <!-- Menu navigasi untuk desktop, tersembunyi pada layar kecil -->
             <ul class="hidden md:flex items-center gap-6">
@@ -85,7 +86,7 @@
     <p id="greeting" class="text-red-500 font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs mb-6 animate-pulse"></p>
     
     <h1 class="text-white text-5xl md:text-8xl pb-6 font-black tracking-tighter uppercase leading-none">
-        SEY<span class="text-red-600">BYTE</span>
+        SEY<span class="text-red-600 animate-pulse">BYTE</span>
     </h1>
     
     <p class="text-zinc-300 max-w-xl text-base md:text-lg font-medium leading-relaxed tracking-wide">
@@ -103,27 +104,28 @@
 
 
         <!-- Section layanan dengan efek hover yang menampilkan deskripsi layanan -->
-        <section id="layanan" class="py-12 border-t border-zinc-200 dark:border-zinc-800">
+        <section id="layanan" class="py-12 reveal border-t border-zinc-200 dark:border-zinc-800">
             <h2 class="text-2xl font-semibold mb-6 text-center">Our Services</h2>
             <!-- Grid layanan dengan efek hover yang menampilkan deskripsi layanan -->
             <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <li class="group cursor-pointer">
+                <li class="reveal group cursor-pointer">
                     <h3 class="font-bold text-lg px-4 py-2 border-2 border-zinc-800 rounded-lg hover:text-red-600 hover:border-red-600 transition-all duration-300">WEBSITE DEVELOPMENT</h3>
                     <p class="text-sm text-zinc-500 mt-3 max-h-0 opacity-0 group-hover:max-h-32 group-hover:opacity-100 transition-all duration-500 px-4 overflow-hidden">Create a stunning online presence for your fashion brand with our custom website development services.</p>
                 </li>
-                <li class="group cursor-pointer">
+                <li class="reveal group cursor-pointer" style="transition-delay: 200ms;">
                     <h3 class="font-bold text-lg px-4 py-2 border-2 border-zinc-800 rounded-lg hover:text-red-600 hover:border-red-600 transition-all duration-300">WEBSITE DESIGN</h3>
                     <p class="text-sm text-zinc-500 mt-3 max-h-0 opacity-0 group-hover:max-h-32 group-hover:opacity-100 transition-all duration-500 px-4 overflow-hidden">Design a visually appealing and user-friendly website that showcases your fashion brand effectively.</p>
                 </li>
-                <li class="group cursor-pointer">
+                <li class="reveal group cursor-pointer" style="transition-delay: 400ms;">
                     <h3 class="font-bold text-lg px-4 py-2 border-2 border-zinc-800 rounded-lg hover:text-red-600 hover:border-red-600 transition-all duration-300">LOW PRICE</h3>
                     <p class="text-sm text-zinc-500 mt-3 max-h-0 opacity-0 group-hover:max-h-32 group-hover:opacity-100 transition-all duration-500 px-4 overflow-hidden">Get the best value for your money with our affordable fashion solutions.</p>
                 </li>
             </ul>
         </section>
 
+
         <!-- Section galeri dengan video yang memiliki efek hover untuk meningkatkan saturasi dan zoom -->
-        <section id="gallery" class="py-12 border-t border-zinc-200 dark:border-zinc-800">
+        <section id="gallery" class="reveal py-12 border-t border-zinc-200 dark:border-zinc-800">
             <h2 class="text-2xl font-semibold mb-6 text-center">New Experiments</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
@@ -146,11 +148,11 @@
             </div>
         </section>
         <!-- Section FAQ dengan efek accordion untuk menampilkan jawaban saat pertanyaan diklik -->
-        <section id="FAQ" class="py-12 border-t border-zinc-200 dark:border-zinc-800">
+        <section id="FAQ" class="reveal py-12 border-t border-zinc-200 dark:border-zinc-800">
     <h2 class="text-2xl font-semibold mb-8 text-center">Frequently Asked Questions</h2>
     <div class="space-y-4">
         <div class="border border-zinc-200 dark:border-zinc-800 rounded-xl overflow-hidden">
-            <button class="w-full p-4 text-left bg-white dark:bg-zinc-900 flex justify-between items-center faq-button transition-all">
+            <button class="reveal w-full p-4 text-left bg-white dark:bg-zinc-900 flex justify-between items-center faq-button transition-all" style="transition-delay: 200ms;">
                 <span class="font-medium">What is SEYBYTE?</span>
                 <span class="transform transition-transform duration-300">▼</span>
             </button>
@@ -161,7 +163,7 @@
 
         <!-- FAQ item with email contact and button -->
         <div class="border border-zinc-200 dark:border-zinc-800 rounded-xl overflow-hidden">
-            <button class="w-full p-4 text-left bg-white dark:bg-zinc-900 flex justify-between items-center faq-button transition-all">
+            <button class="reveal w-full p-4 text-left bg-white dark:bg-zinc-900 flex justify-between items-center faq-button transition-all" style="transition-delay: 200ms;">
                 <span class="font-medium">Where are you located?</span>
                 <span class="transform transition-transform duration-300">▼</span>
             </button>
@@ -172,7 +174,7 @@
 
         <!-- FAQ item with email contact and button -->
         <div class="border border-zinc-200 dark:border-zinc-800 rounded-xl overflow-hidden">
-            <button class="w-full p-4 text-left bg-white dark:bg-zinc-900 flex justify-between items-center faq-button transition-all">
+            <button class="reveal w-full p-4 text-left bg-white dark:bg-zinc-900 flex justify-between items-center faq-button transition-all" style="transition-delay: 200ms;">
                 <span class="font-medium">How can I contact you?</span>
                 <span class="transform transition-transform duration-300">▼</span>
             </button>
@@ -187,8 +189,8 @@
 </section>
 
 <!-- Kontak perusahaan -->
-<section id="contact" class="border-t border-zinc-200 dark:border-zinc-800 py-20">
-    <div class="max-w-md mx-auto px-6">
+<section id="contact" class="reveal border-t border-zinc-200 dark:border-zinc-800 py-20">
+    <div class="reveal max-w-md mx-auto px-6" style="transition-delay: 200ms;">
         <h2 class="text-2xl fond-bold mb-8 text-center tracking-tighter uppercase">Get In Touch</h2>
         <!-- Form kontak dengan input nama, email, dan pesan -->
          <form action="https://formspree.io/f/xpqkoenv" method="POST" class="space-y-4">
@@ -233,7 +235,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
                     <!-- Informasi perusahaan dengan deskripsi singkat -->
                     <div>
-                        <h3 class="text-xl font-bold tracking-tighter uppercase mb-4">SEYBYTE</h3>
+                        <h3 class="text-xl font-bold tracking-tighter uppercase mb-4">SEY<span class="text-red-600 animate-pulse">BYTE</span></h3>
                         <p class="text-xl text-zinc-500 dark:text-zinc-400 leading-relaxed">Pioneering the intersection of Artificial Intelligence and web development. Based in Medan, Indonesia.</p>
                     </div>
 
@@ -287,6 +289,7 @@
    <script src="Javascript folder/script.js"></script>
    <script src="Javascript folder/navigation.js"></script>
    <script src="Javascript folder/animation.js"></script>
+   <script src="Javascript folder/form.js"></script>
 
 </body>
 

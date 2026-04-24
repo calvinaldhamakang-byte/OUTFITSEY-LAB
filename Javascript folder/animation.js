@@ -66,3 +66,21 @@ window.addEventListener('scroll', () => {
 document.getElementById('backToTop').addEventListener('click', () => { // when the "back to top" button is clicked
     window.scrollTo({ top: 0, behavior: 'smooth' }); // smoothly scroll the user back to the top of the page
 });
+    // ===============================
+    // Logika Reveal On Scroll SEYBYTE
+    // ===============================
+ const observerOption = {
+    threshold: 0.1 // 10% elemen muncul di layar, langsung triger animasinya
+ };
+
+ // Buat Intersection Observer untuk memantau elemen dengan kelas 'reveal'
+const observer = new IntersectionObserver ((entries) => { // Callback function yang dipanggil ketika elemen yang diamati masuk atau keluar dari viewport
+    entries.forEach(entry => { // Loop melalui setiap entry yang diamati
+        if (entry.isIntersecting) { // Jika elemen terlihat di viewport
+            entry.target.classList.add('active'); // Tambahkan kelas 'active' untuk memicu animasi
+        };
+    });
+}, observerOption);
+
+// Pilih semua elemen dengan kelas 'reveal' dan amati mereka
+document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));

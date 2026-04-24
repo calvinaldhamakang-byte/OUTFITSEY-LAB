@@ -1,0 +1,47 @@
+/* ---------------------------------------------------------------------- */
+/* Animasi untuk efek fade-in dan slide-up saat elemen muncul di viewport */
+/* ---------------------------------------------------------------------- */
+    /* kondisi awal: transparan dan agak turun ke bawah */
+    .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:all 0.8s
+    ease-out;
+    }
+
+    /* kondisi saat muncul: Jelas dan naik ke posisi asli */
+    .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+/* --------------------------------------------------------------------- */
+/* --------------- Animasi untuk efek scroll bar ----------------------- */
+/* --------------------------------------------------------------------- */
+    /* Ukuran lebar scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px; /* bikin tipis biar elegan */
+    }
+
+    /* warna lintasan (background scrollbar) */
+    ::webkit-scrollbar-track {
+        background: #09090b; /* warna zinc 950 biar nyatu sama background dark mode */
+    }
+
+    /* warna gagang bagian yang di geser */
+    ::-webkit-scrollbar-thumb {
+        background: #52525b; /* warna abu2 zinc dulu pas diem */
+        border-radius: 10px;
+        border: 2px solid #09090b; /* ngasih jarak bir kelihatan melayang */
+    }
+
+    /* efek pas gagang disentuh di-scroll */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #dc2626; /* berubah jadi merah SEYBYTE pas di scroll */
+    }
+
+    /* loader bar glow effect */
+    #loaderBar {
+        box-shadow: 0 0 15px rgba(220, 38, 0.5);
+        
+    }
